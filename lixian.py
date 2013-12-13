@@ -1,4 +1,3 @@
-
 __all__ = ['XunleiClient']
 
 import urllib
@@ -167,7 +166,7 @@ class XunleiClient:
 			return False
 		#print self.urlopen('http://dynamic.cloud.vip.xunlei.com/user_task?userid=%s&st=0' % id).read().decode('utf-8')
 		self.set_page_size(1)
-		url = 'http://dynamic.cloud.vip.xunlei.com/user_task?userid=%s&st=0' % id
+		url = 'http://dynamic.cloud.vip.xunlei.com/user_task?userid=%s' % id
 		#url = 'http://dynamic.lixian.vip.xunlei.com/login?cachetime=%d' % current_timestamp()
 		r = self.is_login_ok(self.urlread(url))
 		self.set_page_size(self.page_size)
